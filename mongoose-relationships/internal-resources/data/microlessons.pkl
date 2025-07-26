@@ -1,0 +1,74 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = ""
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = ""
+}
+
+embedding = new Template.Microlesson {
+  friendlyName = "Embedding"
+  dirName = "embedding"
+  type = "Content"
+  videoUrl = ""
+}
+
+locatingEmbeddedSubdocuments = new Template.Microlesson {
+  friendlyName = "Locating Embedded Subdocuments"
+  dirName = "locating-embedded-subdocuments"
+  type = "Content"
+  videoUrl = ""
+}
+
+removingEmbeddedSubdocuments = new Template.Microlesson {
+  friendlyName = "Removing Embedded Subdocuments"
+  dirName = "removing-embedded-subdocuments"
+  type = "Content"
+  videoUrl = ""
+}
+
+updatingEmbeddedSubdocuments = new Template.Microlesson {
+  friendlyName = "Updating Embedded Subdocuments"
+  dirName = "updating-embedded-subdocuments"
+  type = "Content"
+  videoUrl = ""
+}
+
+findingAParentFromTheChild = new Template.Microlesson {
+  friendlyName = "Finding a Parent From the Child"
+  dirName = "finding-a-parent-from-the-child"
+  type = "Content"
+  videoUrl = ""
+}
+
+referencing = new Template.Microlesson {
+  friendlyName = "Referencing"
+  dirName = "referencing"
+  type = "Content"
+  videoUrl = ""
+}
+
+addingReferences = new Template.Microlesson {
+  friendlyName = "Adding References"
+  dirName = "adding-references"
+  type = "Content"
+  videoUrl = ""
+}
+
+joiningReferencedDocuments = new Template.Microlesson {
+  friendlyName = "Joining Referenced Documents"
+  dirName = "joining-referenced-documents"
+  type = "Content"
+  videoUrl = ""
+}
+
