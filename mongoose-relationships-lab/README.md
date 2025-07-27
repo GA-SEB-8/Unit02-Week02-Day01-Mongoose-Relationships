@@ -63,7 +63,7 @@ Each note should have:
 * ✅ `GET /doctors` — list all doctors
 * ✅ `GET /doctors/new` — form to add a new doctor
 * ✅ `POST /doctors` — create a new doctor
-* ✅ `GET /doctors/:id` — show doctor details with all their appointments (populate!)
+* ✅ `GET /doctors/:id` — show doctor details with all their appointments
 
 > Only implement **Create** and **Read** for doctors.
 
