@@ -7,6 +7,10 @@ const router = require("express").Router()
 
 // write your routes
 
+router.get("/new",(req,res)=>{
+    res.render("books/new.ejs")
+})
+
 
 
 // export the router
