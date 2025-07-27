@@ -1,5 +1,11 @@
 const mongoose = require("mongoose")
 
+
+const commentSchema = new mongoose.Schema({
+    creator: String,
+    content: String,
+}, {timestamps:true})
+
 // Schema
 const bookSchema = new mongoose.Schema({
     title:{
@@ -19,7 +25,8 @@ const bookSchema = new mongoose.Schema({
     author:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:"Author"
-    }]
+    }],
+    comments: [commentSchema]
 })
 
 

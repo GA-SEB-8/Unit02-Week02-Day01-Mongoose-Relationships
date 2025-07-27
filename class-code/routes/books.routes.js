@@ -38,7 +38,27 @@ router.get("/",async(req,res)=>{
 router.get("/:bookId",async(req,res)=>{
     try{
         const foundBook = await Book.findById(req.params.bookId)
-        res.render("books/book-detaills.ejs",{foundBook: foundBook})
+        console.log(foundBook)
+        res.render("books/book-details.ejs",{foundBook: foundBook})
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+
+// 1. get the book by the id
+// 2. add the new comment to the book.comments array
+// 3. save the book with the updated comment
+// 4. redirect back to the books details
+
+router.post("/:bookId/comment",async(req,res)=>{
+    try{
+        const foundBook = await Book.findById(req.params.bookId)
+        console.log(foundBook)
+        foundBook.comments.push(req.body)
+        foundBook.save()
+        res.redirect(`/books/${foundBook._id}`)
+
     }
     catch(error){
         console.log(error)
