@@ -1,5 +1,6 @@
 // import the model
 const Book = require("../models/Book")
+const Author = require("../models/Author")
 // import the router
 const router = require("express").Router()
 
@@ -7,14 +8,26 @@ const router = require("express").Router()
 
 // write your routes
 
-router.get("/new",(req,res)=>{
-    res.render("books/new.ejs")
+router.get("/new",async(req,res)=>{
+    const allAuthors = await Author.find()
+    res.render("books/new.ejs",{allAuthors: allAuthors})
 })
 
 router.post("/",async(req,res)=>{
     try{
         await Book.create(req.body)
         res.redirect("/books/new")
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+
+router.get("/",async(req,res)=>{
+    try{
+        const allBooks = await Book.find().populate("author")
+        console.log(allBooks)
+        res.render("books/all-books.ejs",{allBooks: allBooks})
     }
     catch(error){
         console.log(error)

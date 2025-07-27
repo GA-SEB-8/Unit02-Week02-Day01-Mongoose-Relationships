@@ -20,9 +20,21 @@
 
 
         <label for="author">Author:</label>
-        <input id="author" name="author" type="text">
+        <select name="author" id="author">
+            <% allAuthors.forEach((oneAuthor)=>{ %>
+                <option value="<%= oneAuthor._id %>"><%= oneAuthor.name %></option>
+            <% }) %>
+        </select>
+
+        
 
         <button>Create Author</button>
     </form>
 </body>
 </html>
+
+<!-- 
+1. send all the authors to the new book form
+2. the user selects an author with the name that they want
+3. send the request with the id of the author
+-->
