@@ -34,6 +34,17 @@ router.get("/",async(req,res)=>{
     }
 })
 
+
+router.get("/:bookId",async(req,res)=>{
+    try{
+        const foundBook = await Book.findById(req.params.bookId)
+        res.render("books/book-detaills.ejs",{foundBook: foundBook})
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+
 // export the router
 module.exports = router
 

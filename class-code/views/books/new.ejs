@@ -20,7 +20,7 @@
 
 
         <label for="author">Author:</label>
-        <select name="author" id="author">
+        <select multiple name="author" id="author">
             <% allAuthors.forEach((oneAuthor)=>{ %>
                 <option value="<%= oneAuthor._id %>"><%= oneAuthor.name %></option>
             <% }) %>

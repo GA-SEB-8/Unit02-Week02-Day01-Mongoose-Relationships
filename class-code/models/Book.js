@@ -16,10 +16,10 @@ const bookSchema = new mongoose.Schema({
         min:0,
         max:5
     },
-    author:{
+    author:[{
         type: mongoose.Schema.Types.ObjectId,
         ref:"Author"
-    }
+    }]
 })
 
 
